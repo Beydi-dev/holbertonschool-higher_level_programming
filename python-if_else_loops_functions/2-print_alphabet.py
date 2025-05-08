@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import string
 
-print(f"{string.ascii_lowercase}")
+#!/usr/bin/python3
+print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
+
 
