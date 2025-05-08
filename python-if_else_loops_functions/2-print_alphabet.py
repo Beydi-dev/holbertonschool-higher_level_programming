@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import string
+from string import ascii_lowercase
 
-for i in range(1):
-    print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
+for i in ascii_lowercase:
+    print(i, end="")
