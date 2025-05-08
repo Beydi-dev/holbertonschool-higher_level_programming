@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import string
 
-#!/usr/bin/python3
-print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
-
+for i in range(97, 123):
+    print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
 
