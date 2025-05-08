@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import string
 
-for i in range(97, 123):
+for i in range(1):
     print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
 
