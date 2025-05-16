@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-my_list = [1, 2, 3]
-x = 10
-for i in range(x):
-    print(my_list[i])
+a = 2
+b = -5
+division = a / b
+print("{}".format(division))
