@@ -14,6 +14,7 @@ Test with no punctuation
 
 >>> text_indentation("")
 <BLANKLINE>
++ >>> text_indentation("")
 
 >>> text_indentation("A:B.C?D")
 A:
