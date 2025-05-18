@@ -2,16 +2,18 @@
 """
 This module defines a function that prints a square with the character #.
 """
+
+
 def print_square(size):
     """
     Prints a square with the character #
 
     Args:
-        size (int): size length of the square
+        size (int): The size length of the square
 
     Raises:
-        TypeError: if size is not an integer
-        ValueError: if size is less than 0
+        TypeError: If size is not an integer
+        ValueError: If size is less than 0
     """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
