@@ -22,9 +22,9 @@ Add two floats:
 
 If a or b is not an integer or a float:
     >>> add_integer("salut", 4)
-Traceback (most recent call last):
+    Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+    TypeError: a must be an integer
 
     >>> add_integer("3", 4)
 	Traceback (most recent call last):
