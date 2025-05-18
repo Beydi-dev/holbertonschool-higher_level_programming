@@ -1,0 +1,40 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you? I'm fine: really.")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I'm fine:
+<BLANKLINE>
+really.
+
+>>> text_indentation("Test with no punctuation")
+Test with no punctuation
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation("A:B.C?D")
+A:
+<BLANKLINE>
+B.
+<BLANKLINE>
+C?
+<BLANKLINE>
+D
+
+>>> text_indentation("Space after colon:   text")
+Space after colon:
+<BLANKLINE>
+text
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
