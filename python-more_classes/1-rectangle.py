@@ -5,7 +5,7 @@ This module defines a Rectangle class.
 
 
 class Rectangle:
-    """An empty class that defines a Rectangle"""
+    """This class defines a rectangle with width and height"""
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
