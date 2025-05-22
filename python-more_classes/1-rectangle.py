@@ -7,10 +7,6 @@ This module defines a Rectangle class.
 class Rectangle:
     """This class defines a rectangle with width and height"""
     def __init__(self, width=0, height=0):
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
         self.__width = width
         self.__height = height
 
