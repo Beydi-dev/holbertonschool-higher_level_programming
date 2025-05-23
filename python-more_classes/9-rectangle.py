@@ -69,3 +69,7 @@ class Rectangle:
         if rect1.area() >= rect_2.area():
             return rect1
         return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(width=size, height=size)
