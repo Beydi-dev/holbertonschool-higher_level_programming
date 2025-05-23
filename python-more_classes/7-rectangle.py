@@ -7,8 +7,9 @@ This module defines a Rectangle class.
 class Rectangle:
     """This class defines a rectangle with width and height"""
     number_of_instances = 0
+    print_symbol = '#'
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0,):
         Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
@@ -52,7 +53,7 @@ class Rectangle:
         else:
             lines = []
             for i in range(self.__height):
-                lines.append("#" * self.__width)
+                lines.append(str(self.print_symbol * self.__width))
             return "\n".join(lines)
 
     def __repr__(self):
