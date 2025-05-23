@@ -9,14 +9,14 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-    def __init__(self, width=0, height=0,):
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -24,11 +24,11 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -36,7 +36,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
 
     def area(self):
         return (self.width * self.height)
@@ -50,11 +50,8 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        else:
-            lines = []
-            for i in range(self.height):
-                lines.append(str(self.print_symbol * self.width))
-            return "\n".join(lines)
+        return "\n".join([str(self.print_symbol) * self.width
+                          for _ in range(self.height)])
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
@@ -62,3 +59,12 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect1, rect_2):
+        if not isinstance(rect1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect1.area() == rect_2.area():
+            return rect1
