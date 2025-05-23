@@ -6,7 +6,10 @@ This module defines a Rectangle class.
 
 class Rectangle:
     """This class defines a rectangle with width and height"""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -56,4 +59,5 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
