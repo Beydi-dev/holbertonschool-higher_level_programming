@@ -1,0 +1,44 @@
+>>> My_list = __import__('1-my_list.py').My_list
+
+
+Import and create instance of MyList:
+>>> my_list = MyList()
+>>> my_list.append(7)
+>>> print(my_list)
+[7]
+
+
+Test with integers:
+>>> my_list = MyList([5, 4, 3, 2, 1])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[5, 4, 3, 2, 1]
+
+Test with negative values:
+>>> my_list = MyList([-10, 3, 0, -1, 2])
+>>> my_list.print_sorted()
+[-10, -1, 0, 2, 3]
+>>> print(my_list)
+[-10, 3, 0, -1, 2]
+
+Test with duplicated values:
+>>> my_list = MyList([3, 1, 2, 3, 2, 1])
+>>> my_list.print_sorted()
+[1, 1, 2, 2, 3, 3]
+>>> print(my_list)
+[3, 1, 2, 3, 2, 1]
+
+Test with an empty list:
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+
+List with unique element:
+>>> my_list = MyList([1])
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
