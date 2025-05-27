@@ -1,0 +1,29 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+Validate positive integer:
+>>> bg.integer_validator("width", 10)
+
+Validate zero value (should raise ValueError):
+>>> bg.integer_validator("height", 0)
+Traceback (most recent call last):
+...
+ValueError: height must be greater than 0
+
+Validate negative value (should raise ValueError):
+>>> bg.integer_validator("size", -3)
+Traceback (most recent call last):
+...
+ValueError: size must be greater than 0
+
+Validate non-integer (should raise TypeError):
+>>> bg.integer_validator("length", "3")
+Traceback (most recent call last):
+...
+TypeError: length must be an integer
+
+Validate non-integer (should raise TypeError):
+>>> bg.integer_validator("number", 5.5)
+Traceback (most recent call last):
+...
+TypeError: number must be an integer
