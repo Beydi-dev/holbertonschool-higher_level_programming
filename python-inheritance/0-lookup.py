@@ -4,4 +4,4 @@ and methods of an object"""
 
 
 def lookup(obj):
-    return dir(lookup)
+    return dir(obj)
