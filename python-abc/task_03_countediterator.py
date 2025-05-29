@@ -7,6 +7,9 @@ class CountedIterator:
         self.iterator = iter(iterable)
         self.count = 0
 
+    def __iter__(self):
+        return self
+
     def get_count(self):
         return self.count
 
