@@ -4,7 +4,6 @@
 
 def read_file(filename=""):
     """a function that reads a text file (UTF8) and prints it to stdout"""
-    if filename.endswith(".txt"):
-        with open(filename) as file:
-            content = file.read()
-            print(content, end="")
+    with open(filename) as file:
+        content = file.read()
+        print(content, end="")
