@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def read_file(filename=""):
-    with open(filename) as file:
-        content = file.read()
-        print(content, end="")
+    if filename.endswith(".txt"):
+        with open(filename) as file:
+            content = file.read()
+            print(content, end="")
