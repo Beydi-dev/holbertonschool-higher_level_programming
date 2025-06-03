@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""Returns a dictionary description with simple data structure"""
-import json
+"""defines function to return dictionary description for JSON serialization"""
 
 
 def class_to_json(obj):
-    """Function that returns the dictionary
-    description with simple data structure"""
+    """returns dictionary description for JSON serialization"""
     return obj.__dict__
