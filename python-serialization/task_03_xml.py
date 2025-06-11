@@ -12,7 +12,7 @@ def serialize_to_xml(dictionary, filename):
     ET.ElementTree(root).write(filename)
 
 
-def deserialize_to_xml(filename):
+def deserialize_from_xml(filename):
     """deserializing XML to Python dictionary"""
     tree = ET.parse(filename)       # Loading the XML
     root = tree.getroot()           # Retrieving <data> root
