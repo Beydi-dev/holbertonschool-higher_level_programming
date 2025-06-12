@@ -31,3 +31,10 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
+
+if __name__ == "__main__":
+    from http.server import HTTPServer
+    PORT = 8000
+    server = HTTPServer(("", PORT), Handler)
+    print(f"Serving at http://localhost:{PORT}")
+    server.serve_forever()
