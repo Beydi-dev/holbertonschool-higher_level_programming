@@ -1,0 +1,2 @@
+-- Lists all comedy shows in the database hbtn_0d_tvshows.
+-- Records are ordered by descending show title.
