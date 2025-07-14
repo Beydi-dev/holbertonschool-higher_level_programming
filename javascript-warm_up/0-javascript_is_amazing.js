@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// prints 3 phrases
+// prints 1 phrases
 
 const myVar = 'JavaScript is amazing';
 console.log(myVar);
